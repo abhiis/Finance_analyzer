@@ -1,0 +1,111 @@
+return self._generate_plot(
+            monthly_spending, 'Monthly Spending Overview', 'Month', 'Amount Spent', 'line')
+self._generate_plot(
+            monthly_comparison, 'Monthly Income vs Expenditure', 'Month', 'Amount', kind='bar')
+self._generate_plot(
+            average_balance, 'Monthly Average Balance', 'Month', 'Amount', kind='bar')
+
+self._generate_plot(
+            monthly_comparison, 'Cash Flow Analysis', 'Month', 'Net Cash Flow', kind='bar')
+ self._generate_plot(seasonal_trends, 'Seasonal Trends in Withdrawal Amount',
+                            'Month', 'Average Withdrawal Amount', kind='line')
+self._generate_plot(
+            budget_vs_actuals, 'Budget vs Actuals', 'Category', 'Amount', kind='bar')
+
+self._generate_plot(
+            monthly_comparison['Savings Rate'], 'Monthly Savings Rate', 'Month', 'Savings Rate (%)', kind='line')
+ self._generate_plot(
+            mom_growth, 'MoM Growth in Expenses', period, 'Growth (%)', kind='line')
+self._generate_plot(top_expenses['Withdrawal Amount'],
+                            'Top 5 Expenses of the Month', 'Narration', 'Amount', 'bar')
+
+self._generate_plot(
+            monthly_withdrawals, 'Monthly Withdrawal Trend Analysis', 'Month', 'Withdrawal Amount', 'line')
+ self._generate_plot(
+            monthly_deposits, 'Monthly Deposit Trend Analysis', 'Month', 'Deposit Amount', 'line')
+self._generate_plot(daywise_expense, 'Daywise Spending',
+                            'Day', 'Amount Spent', 'line')
+self._generate_plot(
+            weekwise_expense, 'Weekwise Spending', 'Week', 'Amount Spent', 'line')
+
+self._generate_plot(
+            comparison_df, 'Expense categories vs Budget', 'Category', 'Amount', 'bar')
+
+self._generate_plot(
+            rolling_average, f'Rolling Average Spending (Window: {window}) Days', 'Date', 
+            'Amount', 'line')
+
+self._generate_plot(income_by_category, 'Income Categories',
+                                identity, f'{transact_column} Amount', 'pie')
+
+self._generate_plot(expense_by_category, 'Expense Categories',
+                                identity, f'{transact_column} Amount', 'pie')
+
+            ### Process
+            process_categorisation(categories_dict) -> calls categorize_expenses(self, categories, identity)
+         budget_vs_actuals
+        category_vs_budget
+
+
+         ##init
+            monthly_spending_overview
+            find_recurring_deposits
+            budget_vs_actuals
+            monthly_spending_overview
+            flag_unusual_expenses
+            income_vs_expenditure
+            find_recurring_payments
+            identify_spikes
+            average_monthly_balance
+            busiest_day_of_month
+            transaction_frequencies
+            cash_flow_analysis
+            seasonal_trends
+            savings_rate
+            mom_growth
+            financial_health_score
+            top_5_expenses
+            withdrawal_trend_analysis
+            deposit_trend_analysis
+            daywise_spending
+            weekwise_spending
+            rolling_average_spending
+            expense_predictions
+
+
+
+
+
+
+          expand_categories
+
+          #vars
+          df
+
+            monthly_spending  monthly_spending_overview()
+            monthly_comparison income_vs_expenditure()
+            recurring_payments find_recurring_payments()
+            monthly_spending, spikes  identify_spikes()
+            unusual_months flag_unusual_expenses()
+            busiest_day busiest_day_of_month()
+            seasonal_trends seasonal_trends()
+            top_expenses, top_5_expenses()
+            daywise_expense, daywise_spending()
+            weekwise_expense, weekwise_spending()
+            comparison_df, category_vs_budget(budget_dict)
+            income_by_category, expense_by_category categorize_expense(self, categories, identity)  -> also updates self.df
+
+
+            #quant
+            score, financial_health_score()
+            monthly_withdrawals, withdrawal_trend_analysis()
+            monthly_deposits, 
+            average_balance average_monthly_balance()
+            withdrawal_count, deposit_count transaction_frequencies()
+            recurring_deposit_narrations  find_recurring_deposits()
+            monthly_comparison cash_flow_analysis()
+            budget_vs_actuals budget_vs_actuals()
+            monthly_comparison_savings_rate, savings_rate()  return monthly_comparison['Savings Rate']
+            monthly_expense, next_month_prediction{} expense_predictions()
+            mom_growth mom_growth(period='Month', value='Withdrawal')
+            rolling_average, rolling_average_spending(window=3)
